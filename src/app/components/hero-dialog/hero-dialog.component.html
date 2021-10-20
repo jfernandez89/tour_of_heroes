@@ -1,0 +1,33 @@
+<!-- Header -->
+<div class="hero-dialog__header">
+    <div class="dialog-title">Héroe</div>
+    <mat-icon [mat-dialog-close]="false">close</mat-icon>
+</div>
+
+<!-- Content -->
+<div class="hero-dialog__content">
+    <form [formGroup]="heroFormGroup">
+        <!-- Name -->
+        <mat-form-field class="input-full-width">
+            <input matInput placeholder="Nombre" formControlName="name" UpperCase />
+            <mat-error *ngIf="heroFormGroup.controls['name'].invalid">El nombre es obligatorio.</mat-error>
+        </mat-form-field>
+
+        <!-- Image -->
+        <mat-form-field class="input-full-width">
+            <input matInput placeholder="URL" formControlName="image" />
+            <mat-error *ngIf="heroFormGroup.controls['image'].invalid">La URL es requerida y debe ser valida.</mat-error>
+        </mat-form-field>
+
+        <!-- Description -->
+        <mat-form-field class="input-full-width">
+            <textarea matInput matInput rows="4" placeholder="Descripción" formControlName="description"></textarea>
+            <mat-error *ngIf="heroFormGroup.controls['description'].invalid">
+                La descripción del heroe es obligatoria y al menos tiene que tener 15 caracteres.
+            </mat-error>
+        </mat-form-field>
+
+        <!-- Add Hero -->
+        <button class="" mat-flat-button color="primary" (click)="save()" [disabled]="heroFormGroup.invalid">Guardar</button>
+    </form>
+</div>

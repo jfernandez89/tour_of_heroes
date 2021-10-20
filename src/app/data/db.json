@@ -1,0 +1,28 @@
+{
+  "heroes": [
+    {
+      "id": 0,
+      "name": "SpiderMan",
+      "description": "Spider-Man —a veces traducido como Hombre Araña es un personaje creado por los estadounidenses Stan Lee y Steve Ditko, introducido en el cómic Amazing Fantasy n° 15, publicado por Marvel Comics en agosto de 1962. Se trata de un superhéroe que emplea sus habilidades sobrehumanas, reminiscentes de una araña, para combatir a otros supervillanos que persiguen fines siniestros.",
+      "image": "https://www.fantasymundo.com/wp-content/uploads/2018/02/Spiderman.jpg"
+    },
+    {
+      "id": 1,
+      "name": "Venom",
+      "image": "https://i.pinimg.com/474x/32/75/25/327525fe784a7ef77beafde65dfcb150--spiderman-ultimate-ultimate-marvel.jpg",
+      "description": "Venom ​es un antiheroe y supervillano que aparece en los cómics publicados por la editorial estadounidense Marvel Comics. El personaje es un extraterrestre sensible simbionte con una forma amorfa, semi-líquido, que sobrevive mediante la unión con un huésped, por lo general humano"
+    },
+    {
+      "id": 2,
+      "name": "Hulk",
+      "image": "https://i.pinimg.com/550x/4e/15/b7/4e15b7b78db1d941b295f7ff6c0f5475.jpg",
+      "description": "Hulk es un personaje ficticio, un superhéroe que aparece en los cómics estadounidenses publicados por la editorial Marvel Comics. El personaje fue creado por los escritores Stan Lee y Jack Kirby siendo su primera aparición en The Incredible Hulk #1 publicado en mayo de 1962."
+    },
+    {
+      "id": 3,
+      "name": "Iron Man",
+      "image": "https://www.megaidea.net/wp-content/uploads/2019/09/iron-vengador2.png",
+      "description": "Es un superhéroe que aparece en los cómics estadounidenses publicados por Marvel Comics. El personaje fue cocreado por el escritor y editor Stan Lee, desarrollado por el guionista Larry Lieber y diseñado por los artistas Don Heck y Jack Kirby. Hizo su primera aparición en Tales of Suspense #39 (marzo de 1963), y recibió su propio título en Iron Man."
+    }
+  ]
+}

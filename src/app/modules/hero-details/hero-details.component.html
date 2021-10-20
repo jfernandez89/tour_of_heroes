@@ -1,0 +1,15 @@
+<div class="hero-details">
+    <!-- Go back -->
+    <button mat-flat-button color="primary" (click)="goBack()" class="go-back">VOLVER</button>
+
+    <!-- hero  -->
+    <div class="hero-information">
+        <div class="custom-column" fxFlex.xs="80%" fxFlex.sm="60%" fxFlex="50%">
+            <div class="hero-name">{{ heroDetails.name }}</div>
+
+            <img class="hero-image" [src]="heroDetails.image" />
+
+            <div class="hero-description">{{ heroDetails.description }}</div>
+        </div>
+    </div>
+</div>

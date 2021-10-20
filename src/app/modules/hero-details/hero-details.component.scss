@@ -1,0 +1,38 @@
+.hero-details {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+
+  .go-back {
+    margin-bottom: 1.714286rem;
+  }
+
+  .hero-information {
+    flex: 1 1 auto;
+    overflow-y: scroll;
+    width: 100%;
+
+    .custom-column {
+      margin: 0 auto;
+
+      .hero-name {
+        font-size: 1.714286rem;
+        font-weight: 500;
+        margin-bottom: 1.714286rem;
+      }
+
+      .hero-description {
+        margin-bottom: 1.714286rem;
+      }
+
+      .hero-image {
+        border-radius: 1.714286rem;
+        height: auto;
+        margin-bottom: 1.714286rem;
+        width: 100%;
+      }
+    }
+  }
+}

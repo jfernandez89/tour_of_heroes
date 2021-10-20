@@ -1,0 +1,11 @@
+<!-- Header -->
+<div class="user-dialog__header">
+    <div class="dialog-title">¿Desea borrar a {{ data.name }}?</div>
+    <mat-icon [mat-dialog-close]="false">close</mat-icon>
+</div>
+
+<!-- Content -->
+<div class="user-dialog__content">
+    <button mat-raised-button color="warn" [mat-dialog-close]="true">Sí</button>
+    <button mat-stroked-button color="primary" [mat-dialog-close]="false">No</button>
+</div>

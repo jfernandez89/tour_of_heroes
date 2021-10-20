@@ -1,0 +1,27 @@
+.hero-dialog {
+  &__header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    .dialog-title {
+      font-size: 1.428571rem;
+      font-weight: 500;
+      line-height: 1.4;
+    }
+
+    .mat-icon {
+      cursor: pointer;
+    }
+  }
+
+  &__content {
+    padding: 1.714286rem 0;
+
+    .input-full-width {
+      width: 100%;
+      margin-bottom: 1.142857rem;
+    }
+  }
+}

@@ -1,0 +1,55 @@
+<div class="hero-list">
+    <!-- Search: In case of being a real project, we could componentize this functionality -->
+    <div fxLayout="row" class="search-group">
+        <mat-form-field>
+            <span matPrefix> </span>
+            <input #searchInput type="text" matInput placeholder="Buscar héroe" [disabled]="loading" />
+            <button matSuffix mat-button><mat-icon>search</mat-icon></button>
+        </mat-form-field>
+    </div>
+
+    <!-- Loading -->
+    <mat-spinner [diameter]="50" *ngIf="spinnerService.visibility | async"></mat-spinner>
+
+    <!-- Grid -->
+    <div fxLayout="row wrap" fxLayoutGap="24px grid">
+        <div fxFlex.xs="100%" fxFlex.sm="50%" fxFlex="33%" *ngFor="let hero of heroService.heroList$ | async">
+            <!-- Hero -->
+            <mat-card class="mat-elevation-z2">
+                <!-- Header -->
+                <div fxLayout="row" fxLayoutAlign="space-between center" class="custom-card-header">
+                    <div class="hero_card__title">{{ hero.name }}</div>
+                    <mat-icon color="warn" (click)="removeHero(hero.id, hero.name)">delete</mat-icon>
+                </div>
+
+                <!-- Custom image -->
+                <div class="custom_image" [ngStyle]="{ 'background-image': 'url(' + hero.image + ')' }"></div>
+
+                <!-- Content -->
+                <mat-card-content>
+                    <p class="hero_card__decription">
+                        {{ hero.description }}
+                    </p>
+                </mat-card-content>
+
+                <mat-card-actions fxLayout="row" fxLayoutAlign="space-between center">
+                    <button mat-button (click)="viewHeroDetails(hero.id)">{{ "ver" | uppercase }}</button>
+                    <button mat-button color="primary" (click)="editHero(hero.id)">
+                        <mat-icon><span class="material-icons-outlined">edit</span></mat-icon>
+                    </button>
+                </mat-card-actions>
+            </mat-card>
+        </div>
+    </div>
+
+    <div class="add-button-container" *ngIf="!loading">
+        <button mat-fab color="primary" (click)="addHero()">
+            <mat-icon>add</mat-icon>
+        </button>
+    </div>
+
+    <!-- No results -->
+    <ng-container *ngIf="!loading && (heroService.heroList$ | async) as heroList">
+        <p *ngIf="heroList.length == 0" class="no-results">¡No hay heroes, pulse el botón para añadir uno!</p>
+    </ng-container>
+</div>

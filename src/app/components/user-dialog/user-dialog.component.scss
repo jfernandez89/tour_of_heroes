@@ -1,0 +1,29 @@
+.user-dialog {
+  &__header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    .dialog-title {
+      color: red;
+      font-size: 1.142857rem;
+      font-weight: 500;
+      padding-right: 1.785714rem;
+    }
+
+    .mat-icon {
+      cursor: pointer;
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1.714286rem 0;
+
+    button {
+      width: 7.142857rem;
+    }
+  }
+}
